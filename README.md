@@ -21,7 +21,7 @@ Standard Library (iostream, cstdlib, ctime)
 bash
 Copy
 Edit
-
+https://github.com/KarishmaPateloo/Rock-Paper-scissor-Game/blob/main/Rock-Paper-scissor
 
 3. Compile the code
 Using c++:
