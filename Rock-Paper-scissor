@@ -1,0 +1,39 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+    string choices[] = {"Rock", "Paper", "Scissors"};
+    int userChoice, computerChoice;
+    
+    srand(time(0));
+    computerChoice = rand() % 3;
+    
+    cout << "Rock Paper Scissors Game\n";
+    cout << "1. Rock\n2. Paper\n3. Scissors\n";
+    cout << "Enter your choice (1-3): ";
+    cin >> userChoice;
+    
+    if (userChoice < 1 || userChoice > 3) {
+        cout << "Invalid choice! Try again.\n";
+        return 0;
+    }
+    
+    userChoice--;
+
+    cout << "You chose: " << choices[userChoice] << endl;
+    cout << "Computer chose: " << choices[computerChoice] << endl;
+    
+    if (userChoice == computerChoice)
+        cout << "It's a tie!\n";
+    else if ((userChoice == 0 && computerChoice == 2) || 
+             (userChoice == 1 && computerChoice == 0) || 
+             (userChoice == 2 && computerChoice == 1))
+        cout << "You win!\n";
+    else
+        cout << "Computer wins!\n";
+
+    return 0;
+}
